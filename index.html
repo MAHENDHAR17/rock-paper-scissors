@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="mahi">
+
+        <h1 class="sub"> hello</h1>
+        <button id="Rock" onclick="
+        var computervalue = Math.random()
+        var computermove='';
+        if(computervalue>=0.01 && computervalue<0.33){
+            computermove='rock'
+        } else if(computervalue>0.34 && computervalue<0.66){
+            computermove='paper'
+        }else if(computervalue>0.67 && computervalue<=0.99){
+            computermove='scissor'
+        }
+       
+
+        if(computermove=='rock'){
+            document.querySelector('.sub').innerText = 'you win';
+            console.log('win')
+            document.querySelector('.mahi').classList.add('after')
+        }else{
+            document.querySelector('.mahi').classList.add('hello')
+            document.querySelector('.sub').innerText = 'out';
+            document.querySelector('.mahi').classList.remove('after')
+            
+            console.log('out')
+        }
+            ">rock</button>
+        <button id="paper" onclick="
+        var computervalue = Math.random()
+        var computermove='';
+        if(computervalue>=0.01 && computervalue<0.33){
+            computermove='rock'
+        } else if(computervalue>0.34 && computervalue<0.66){
+            computermove='paper'
+        }else if(computervalue>0.67 && computervalue<=0.99){
+            computermove='scissor'
+        }
+      
+
+        if(computermove=='paper'){
+            document.querySelector('.sub').innerText = 'you win ';
+            document.querySelector('.mahi').classList.add('after')
+            console.log('win')
+        }else{
+            document.querySelector('.mahi').classList.add('hello')
+            document.querySelector('.sub').innerText = 'out';
+            document.querySelector('.mahi').classList.remove('after')
+        }"> Paper </button>
+        <button id="scissor" onclick="
+        var computervalue = Math.random()
+        var computermove='';
+        if(computervalue>=0.01 && computervalue<0.33){
+            computermove='rock'
+        } else if(computervalue>0.34 && computervalue<0.66){
+            computermove='paper'
+        }else if(computervalue>0.67 && computervalue<=0.99){
+            computermove='scissor'
+        }
+
+
+        if(computermove=='paper'){
+            document.querySelector('.sub').innerText = 'you win ';
+            document.querySelector('.mahi').classList.add('after');
+            console.log('win')
+        }else{
+            document.querySelector('.mahi').classList.add('hello')
+            document.querySelector('.sub').innerText = 'out';
+            document.querySelector('.mahi').classList.remove('after')
+        }">scissor</button>
+        <button class="reload" onclick="
+        document.querySelector('.sub').innerText = 'hello';
+        document.querySelector('.mahi').classList.remove('after','hello');
+        ">Reload</button>
+
+       
+    </div>
+</body>
+</html>
