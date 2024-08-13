@@ -9,7 +9,7 @@
 <body>
     <div class="mahi">
 
-        <h1 class="sub"> hello</h1>
+        <h1 class="sub"> HELLO</h1>
         <button id="Rock" onclick="
         var computervalue = Math.random()
         var computermove='';
@@ -20,18 +20,17 @@
         }else if(computervalue>0.67 && computervalue<=0.99){
             computermove='scissor'
         }
-       
-
         if(computermove=='rock'){
-            document.querySelector('.sub').innerText = 'you win';
-            console.log('win')
+            document.querySelector('.sub').innerText = 'TIE';
             document.querySelector('.mahi').classList.add('after')
-        }else{
-            document.querySelector('.mahi').classList.add('hello')
-            document.querySelector('.sub').innerText = 'out';
+        }else if(computermove=='paper'){
+            document.querySelector('.sub').innerText = 'LOSE';
             document.querySelector('.mahi').classList.remove('after')
-            
-            console.log('out')
+            document.querySelector('.mahi').classList.add('hello')
+        }else if(computermove=='scissor'){
+            document.querySelector('.sub').innerText = 'WIN';
+            document.querySelector('.mahi').classList.remove('hello')
+            document.querySelector('.mahi').classList.add('after')
         }
             ">rock</button>
         <button id="paper" onclick="
@@ -44,17 +43,20 @@
         }else if(computervalue>0.67 && computervalue<=0.99){
             computermove='scissor'
         }
-      
-
         if(computermove=='paper'){
-            document.querySelector('.sub').innerText = 'you win ';
+            document.querySelector('.sub').innerText = 'TIE ';
             document.querySelector('.mahi').classList.add('after')
-            console.log('win')
-        }else{
-            document.querySelector('.mahi').classList.add('hello')
-            document.querySelector('.sub').innerText = 'out';
+    
+        }else if(computermove=='rock'){
+            document.querySelector('.sub').innerText = 'WIN';
+            document.querySelector('.mahi').classList.remove('hello')
+            document.querySelector('.mahi').classList.add('after')
+        }else if(computermove=='scissor'){
+            document.querySelector('.sub').innerText = 'LOSE';
             document.querySelector('.mahi').classList.remove('after')
-        }"> Paper </button>
+            document.querySelector('.mahi').classList.add('hello')
+        }
+        "> Paper </button>
         <button id="scissor" onclick="
         var computervalue = Math.random()
         var computermove='';
@@ -65,21 +67,37 @@
         }else if(computervalue>0.67 && computervalue<=0.99){
             computermove='scissor'
         }
-
-
-        if(computermove=='paper'){
-            document.querySelector('.sub').innerText = 'you win ';
+        if(computermove=='scissor'){
+            document.querySelector('.sub').innerText = 'TIE ';
             document.querySelector('.mahi').classList.add('after');
-            console.log('win')
-        }else{
-            document.querySelector('.mahi').classList.add('hello')
-            document.querySelector('.sub').innerText = 'out';
-            document.querySelector('.mahi').classList.remove('after')
-        }">scissor</button>
+        }else if(computermove=='rock'){
+            document.querySelector('.sub').innerText = 'LOSE';
+            document.querySelector('.mahi').classList.remove('after');
+            document.querySelector('.mahi').classList.add('hello');
+        }else if(computermove=='paper'){
+            document.querySelector('.sub').innerText = 'WIN';
+            document.querySelector('.mahi').classList.add('after');
+            document.querySelector('.mahi').classList.remove('hello');
+        }
+        ">scissor</button>
         <button class="reload" onclick="
-        document.querySelector('.sub').innerText = 'hello';
+        document.querySelector('.sub').innerText = 'HELLO';
         document.querySelector('.mahi').classList.remove('after','hello');
         ">Reload</button>
+
+        <script> 
+        function game(){
+            var computervalue = Math.random()
+        var computermove='';
+        if(computervalue>=0.01 && computervalue<0.33){
+            computermove='rock'
+        } else if(computervalue>0.34 && computervalue<0.66){
+            computermove='paper'
+        }else if(computervalue>0.67 && computervalue<=0.99){
+            computermove='scissor'
+        }
+    }
+        </script>
 
        
     </div>
