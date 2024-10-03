@@ -22,14 +22,17 @@
         }
         if(computermove=='rock'){
             document.querySelector('.sub').innerText = 'TIE';
-            document.querySelector('.mahi').classList.add('after')
+            document.querySelector('.mahi').classList.remove('after')
+            document.querySelector('.mahi').classList.add('tie')
         }else if(computermove=='paper'){
             document.querySelector('.sub').innerText = 'LOSE';
             document.querySelector('.mahi').classList.remove('after')
+            document.querySelector('.mahi').classList.remove('tie')
             document.querySelector('.mahi').classList.add('hello')
         }else if(computermove=='scissor'){
             document.querySelector('.sub').innerText = 'WIN';
             document.querySelector('.mahi').classList.remove('hello')
+            document.querySelector('.mahi').classList.remove('tie')
             document.querySelector('.mahi').classList.add('after')
         }
             ">rock</button>
@@ -45,15 +48,18 @@
         }
         if(computermove=='paper'){
             document.querySelector('.sub').innerText = 'TIE ';
-            document.querySelector('.mahi').classList.add('after')
+            document.querySelector('.mahi').classList.remove('after')
+            document.querySelector('.mahi').classList.add('tie')
     
         }else if(computermove=='rock'){
             document.querySelector('.sub').innerText = 'WIN';
             document.querySelector('.mahi').classList.remove('hello')
+            document.querySelector('.mahi').classList.remove('tie')
             document.querySelector('.mahi').classList.add('after')
         }else if(computermove=='scissor'){
             document.querySelector('.sub').innerText = 'LOSE';
             document.querySelector('.mahi').classList.remove('after')
+            document.querySelector('.mahi').classList.remove('tie')
             document.querySelector('.mahi').classList.add('hello')
         }
         "> Paper </button>
@@ -69,14 +75,17 @@
         }
         if(computermove=='scissor'){
             document.querySelector('.sub').innerText = 'TIE ';
-            document.querySelector('.mahi').classList.add('after');
+            document.querySelector('.mahi').classList.remove('after')
+            document.querySelector('.mahi').classList.add('tie');
         }else if(computermove=='rock'){
             document.querySelector('.sub').innerText = 'LOSE';
             document.querySelector('.mahi').classList.remove('after');
+            document.querySelector('.mahi').classList.remove('tie')
             document.querySelector('.mahi').classList.add('hello');
         }else if(computermove=='paper'){
             document.querySelector('.sub').innerText = 'WIN';
             document.querySelector('.mahi').classList.add('after');
+            document.querySelector('.mahi').classList.remove('tie')
             document.querySelector('.mahi').classList.remove('hello');
         }
         ">scissor</button>
